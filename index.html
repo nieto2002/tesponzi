@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+  <header class="header">
+    <div class="porcentaje">porcentaje: 0%</div>
+    <div class="nft-value">Valor de NFT: 0$</div>
+    <div class="rewards">Recompensas: 0$</div>
+    <div class="balance">Saldo: 0$</div>
+    <button class="connect-btn">Conectar</button>
+  </header>
+
+<div class="main-content">
+
+    <div class="sidebar">
+        <div class="logo">
+            <svg viewBox="0 0 100 100">
+                 <img src="imagenes/alien.png" alt="logo" height="100" width="90">
+                
+            </svg>
+        </div>
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-item active" data-section="inicio">Inicio</a></li>
+            <li><a href="#soldados" class="menu-item" data-section="soldados">Mis Soldados</a></li>
+            <li><a href="#batallas" class="menu-item" data-section="batallas">Batallas</a></li>
+            <li><a href="#competencias" class="menu-item" data-section="competencias">Competencias</a></li>
+            <li><a href="#cuenta" class="menu-item" data-section="cuenta">Mi Cuenta</a></li>
+        </ul>
+    </div>
+
+    <div class="content-container">
+        <div class="content-area">
+            <div id="inicio" class="section active">
+                <div class="galaxy-banner">
+                    <div class="logo2">
+                      <img class="soldado-izq" src="imagenes/banner/izq.png" alt="soldados" height="250" width="250">
+                      <img src="imagenes/banner/logo.png" alt="logo" height="200" width="200">
+                      <img class="soldado-der" src="imagenes/banner/der.png" alt="soldados" height="260" width="260">
+
+                    </div>
+                    <div class="soldado-izq">
+                        <img class="soldado-izq" src="imagenes/banner/izq.png" alt="soldados" height="200" width="200">
+                    </div> 
+
+                    
+                    <div class="stars"></div>
+                    <div class="galaxy"></div>
+                    
+                </div>
+                <h1>Bienvenido a Aliens vs Soldados</h1>
+                <p>¡Prepárate para una batalla épica entre alienígenas y soldados! Elige tu bando, lucha por la victoria y gana recompensas diarias. Explora las diferentes secciones para conocer más sobre nuestros soldados, participar en batallas emocionantes y descubrir nuevas oportunidades en el mercado.</p>
+                
+                <h2>Compra tu soldado y entra a la batalla</h2>
+                
+                <div class="soldier-gallery">
+                    <div class="soldier-card">
+                        <div class="level-bar">1</div>
+                        <img src="imagenes/soldados/soldado1.jpg" alt="comandante fuerte" width="200" height="200"> 
+                        <h3>Cadete</h3>
+                        <p class="soldier-description">Valor: 2$ - Porcentaje de ganancia: 1%</p>
+                        <div class="health-bar hidder">
+                         <div class="health-number">15</div>
+                        <div class="health-fill" style="width: 100%;"></div>
+                        </div>
+                        <button class="buy-soldier" data-soldier="Cadete" data-level="1" data-value="2" data-profit="1">Comprar</button>
+                    </div>
+                    <div class="soldier-card">
+                        <div class="level-bar">2</div>
+                        <img src="imagenes/soldados/soldado2.jpg" alt="Francotirador con rifle de precisión" width="200" height="200">
+                        <h3>Francotirador</h3>
+                        <p class="soldier-description">Valor: 5$ - Porcentaje de ganancia: 2%</p>
+                        <div class="health-bar hidder">
+                        <div class="health-number">15</div> 
+                        <div class="health-fill" style="width: 100%;">100%</div>
+                        </div>
+                        <button class="buy-soldier" data-soldier="Francotirador" data-level="2" data-value="5" data-health="15" data-profit="2">Comprar</button>
+                    </div>
+                    <div class="soldier-card">
+                        <div class="level-bar">3</div>
+                        <img src="imagenes/soldados/soldado3.jpg" alt="Médico de combate con equipo avanzado" width="200" height="200">
+                        <h3>Mersenario</h3>
+                        <p class="soldier-description">Valor: 10$ - Porcentaje de ganancia: 3%</p>
+                        <div class="health-bar">
+                        <div class="health-number">15</div> 
+                        <div class="health-fill" style="width: 100%;"></div>
+                        </div>
+                        <button class="buy-soldier" data-soldier="Médico de Combate" data-level="3" data-value="10" data-health="15" data-profit="3">Comprar</button>
+                    </div>
+                    <div class="soldier-card">
+                        <div class="level-bar">4</div>
+                        <img src="imagenes/soldados/soldado4.jpg" alt="Ingeniero con traje mecánico de batalla" width="200" height="200">
+                        <h3>Ingeniero</h3>
+                        <p class="soldier-description">Valor: 20$ - Porcentaje de ganancia: 4%</p>
+                        <div class="health-bar">
+                        <div class="health-number">15</div> 
+                        <div class="health-fill" style="width: 100%;"></div>
+                        </div>
+                        <button class="buy-soldier" data-soldier="Ingeniero" data-level="4" data-value="20" data-profit="4">Comprar</button>
+                    </div>
+                    <div class="soldier-card">
+                        <div class="level-bar">5</div>
+                        <img src="imagenes/soldados/soldado5.jpg" alt="Comandante con equipo táctico avanzado" width="200" height="200">
+                        <h3>Comandante</h3>
+                        <p class="soldier-description">Valor: 50$ - Porcentaje de ganancia: 5%</p>
+                        <div class="health-bar">
+                         <div class="health-number">15</div>  
+                        <div class="health-fill" style="width: 100%;"></div>
+                        </div>
+                        <button class="buy-soldier" data-soldier="Comandante" data-level="5" data-value="50" data-profit="5">Comprar</button>
+                    </div>
+                </div>
+                    <div class="cont2">
+                       <h1>Como entrar a la Batalla</h1>
+                     <div class="content-gif"> 
+                  <div class="video-conte">
+                          <img src="nft.gif" alt="NFT">                   
+                      </div> 
+                      <div class="tex-conte">
+                          <p>•  Para entrar al juego, primero debes obtener un NFT, dependiendo del nivel, tendrás cierta cantidad de ganancias</p>
+                          <p>•  Los enfrentamientos son entre dos bandos: alien y soldados. Debes decidir por qué bando vas</p>
+                          <p>•  Si el bando que seleccionaste gana, tendrás derecho a recibir tu ganancia diaria con tu porcentaje correspondiente de tu nivel y de tu saldo en Game.</p>
+                          <p>•  Si pierdes, no recibes nada en ese día. Toca intentar al día siguiente.</p>
+                          <p>•  Los enfrentamientos son al azar con una probabilidad de 50% para cada uno</p>
+                      </div>
+                      </div> 
+
+                    </div>
+            </div>
+
+
+            <div id="soldados" class="section">
+                <h1>Mis Soldados</h1>
+                <div id="my-soldiers">
+                      <!-- La barra de energía estará aquí solo después de comprar soldados -->
+                      <div class="health-bar" style="display: none;">
+                      <div class="health-fill" style="width: 100%;"></div>
+                      </div>
+                    <p class="empty-message">Aún no tienes soldados. Compra uno en la página de inicio.</p>
+                </div>
+            </div>
+
+            <div id="batallas" class="section">
+                <h1>Aliens vs Soldados</h1>
+                <p>Elige tu bando y lucha por la victoria diaria:</p>
+                <div id="battle-content">
+                    <div class="team-buttons">
+                        <div class="team-option">
+                <svg class="alien-icon" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#4CAF50"/>
+                <circle cx="35" cy="40" r="10" fill="black"/>
+                <circle cx="65" cy="40" r="10" fill="black"/>
+                <path d="M30 70 Q50 80 70 70" stroke="black" stroke-width="5" fill="none"/>
+                <path d="M20 20 Q30 40 50 30 Q70 40 80 20" stroke="black" stroke-width="3" fill="none"/>
+                </svg>
+                            <button id="alien-btn">Bando Alien</button>
+                        </div>
+                        <div class="team-option">
+                            <svg class="soldier-icon" viewBox="0 0 100 100">
+                                <img src="imagenes/soldado1.jpg" width="200" height="200">
+                            </svg>
+                            <button id="soldier-btn">Bando Soldado</button>
+                        </div>
+                    </div>
+                    <button id="result-btn">Ver Resultado</button>
+                    <div id="result"></div>
+                    <button id="retry-btn" style="display: none;" disabled>Volver a Intentar</button>
+                    <div id="countdown"></div>
+                </div>
+                <div id="no-soldier-message" class="no-soldier-message" style="display: none;">
+                    Necesitas tener al menos un soldado para participar en las batallas. Compra un soldado en la página de inicio.
+                </div>
+            </div>
+
+            <div id="competencias" class="section">
+                <h1>Competencias</h1>
+                <p>Próximamente: Información sobre competencias y progresión de personajes.</p>
+            </div>
+
+            <div id="cuenta" class="section">
+                <h1>Mi Cuenta</h1>
+                <div class="account-info">
+                    <h3>Información de la Cuenta</h3>
+                    <p><strong>Usuario:</strong> <span id="account-username">Usuario123</span></p>
+                    <p><strong>Fecha de registro:</strong> <span id="account-registration-date">01/01/2023</span></p>
+                    <p><strong>Nivel de cuenta:</strong> <span id="account-level">5</span></p>
+                </div>
+                <div class="account-buttons">
+                    <button id="deposit-btn">Depositar</button>
+                    <button id="withdraw-btn">Retirar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="confirmModal" class="modal">
+    <div class="modal-content">
+        <p>¿Estás seguro de elegir este bando?</p>
+        <div class="modal-buttons">
+            <button id="confirm-yes">Sí</button>
+            <button id="confirm-no">No</button>
+        </div>
+    </div>
+</div>
+
+<div id="burnConfirmModal" class="modal">
+  <div class="modal-content">
+    <h2>¿Estás seguro de que quieres quemar a este soldado?</h2>
+    <p>Esta acción es irreversible.</p>
+    <div class="modal-buttons">
+      <button id="burn-yes">Sí</button>
+      <button id="burn-no">No</button>
+    </div>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

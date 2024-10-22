@@ -1,0 +1,553 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #2a2a2a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nft-value, .rewards, .balance, .porcentaje {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nft-value {
+    color: #ff9900;
+}
+
+.rewards {
+    color: white;
+}
+
+.balance {
+    color: white;
+}
+.logo2 {
+    z-index: 50;
+    position: relative;
+    justify-content: center;
+    }
+
+.soldado-izq {
+    float: left;
+    margin-right: 2px;
+    animation: flotacion 3s ease-in-out infinite;
+    /* Opcional: Añade algo de sombra para darle más efecto de "flotación" */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}  
+
+/* Definimos la animación */
+@keyframes flotacion {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Subimos la imagen */
+    }
+    100% {
+        transform: translateY(0); /* Volvemos a la posición original */
+    }
+}
+
+ .soldado-der {
+    float: right;
+    margin-right: 5px;
+    animation: flotacion 4s ease-in-out infinite;
+    /* Opcional: Añade algo de sombra para darle más efecto de "flotación" */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+ }  
+.connect-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.connect-btn:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    background-image: url(fondo.jpg);
+    background-size: cover;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: #2a2a2a;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.logo svg {
+    width: 10px;
+    height: 100px;
+
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #3a3a3a;
+}
+
+.menu a.active {
+    background-color: #4CAF50;
+}
+
+.content-container {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.content-area {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+.team-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.team-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#alien-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#soldier-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+#result-btn, #retry-btn {
+    background-color: #f44336;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.alien-icon, .soldier-icon {
+    width: 50px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    width: 100px;
+}
+
+#countdown {
+    font-size: 14px;
+    color: #ff9900;
+    margin-top: 10px;
+}
+
+.soldier-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.soldier-card {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 200px; /* Opcional: limita el ancho del contenedor de soldados */
+    margin: 0 auto;    /* Centra el contenedor en la página */
+    flex: 1; /* Opcional: para que todos los divs ocupen el mismo espacio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soldier-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.8);
+}
+
+.soldier-card img {
+    max-width: 100%; /* La imagen no será más grande que su contenedor */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+.soldier-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.soldier-card button:hover {
+    background-color: #45a049;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.level-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: rgba(255, 153, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+.level-bar::before {
+    content: "Nivel";
+    margin-right: 5px;
+}
+
+/* Barra de energía contenedor */
+.health-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 25px;
+    position: relative;
+}
+
+.health-bar {
+    display: none; /* Ocultar barra de energía por defecto */
+}
+
+.health-number {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+}
+
+/* Mostrar la barra de energía solo en la página de Mis Soldados */
+#soldados .health-bar {
+    display: block;
+}
+
+
+/* Relleno de la barra de energía */
+.health-fill {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s;
+  border-radius: 5px;
+}
+
+.galaxy-banner {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.galaxy-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #000033, #000066, #003366, #006699);
+    opacity: 0.7;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite;
+    opacity: 0.6;
+}
+
+@keyframes twinkle {
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.1, 1.1); }
+    100% { transform: scale(1, 1); }
+}
+
+.galaxy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(ellipse at center, #ff00ff 0%, #0000ff 50%, #000000 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #0000ff, 0 0 40px #000000;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+#my-soldiers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.empty-message {
+    font-style: italic;
+    color: #888;
+}
+
+.no-soldier-message {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.soldier-description {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.account-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.account-buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+#deposit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#withdraw-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.account-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.account-info {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.account-info h3 {
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.account-info p {
+    margin: 5px 0;
+}
+
+#burn-yes {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+#burn-no {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.video-conte {
+ display: flex; /* Para alinear el contenido horizontalmente */
+  align-items: center;
+}
+
+.cont2 {
+  width: 100%;
+  padding: 20px;
+}
+
+.content-gif {
+  display: flex; /* Para alinear el contenido horizontalmente */
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+.video-conte img {
+  max-width: 300px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.tex-conte {
+  max-width: 500px; /* Ajusta el ancho del texto */
+  text-align: left;
+}
